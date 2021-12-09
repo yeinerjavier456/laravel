@@ -125,7 +125,7 @@
 
             <footer>
                 <img src="./img/logo.png" alt="" srcset="" style="margin-top: 3%;" class="col-md-2">
-                <p style="text-align: center;margin-top: -7%;z-index: 0;font-size: 15px;" class=""><span style=""><strong>CORPORACIÓN UNIVERSITARIA IBEROAMERICANA<br> De: PLANETA FORMACIÓN Y UNIVERSIDADES</strong></span></p>
+                <p style="text-align: center;margin-top: -7%;z-index: 0;font-size: 15px;" class=""><span ><strong>CORPORACIÓN UNIVERSITARIA IBEROAMERICANA<br> De: PLANETA FORMACIÓN Y UNIVERSIDADES</strong></span></p>
                 <p style="text-align: center;">Calle 67 No 5 - 27&nbsp; Bogotá - Colombia.</p>
                 
                 
