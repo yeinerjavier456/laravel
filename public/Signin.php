@@ -1,7 +1,7 @@
 <?php
 
 session_start(); // Important
-require "vendor/autoload.php";
+require "../vendor/autoload.php";
 
 use myPHPnotes\Microsoft\Auth;
 
@@ -13,7 +13,7 @@ $scopes = [
             'Files.Read.All',
            
         ];
-$callback = "http://localhost:8080/IBERO-Estudiantes/callback.php";
+$callback = "http://localhost/ibero/public/callback.php";
 //https://aulavirtual.ibero.edu.co/repositorio/sitios/estudiantes/callback.php
 
 $microsoft = new Auth($tenant, $client_id,  $client_secret, $callback, $scopes);
