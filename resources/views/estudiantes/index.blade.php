@@ -40,7 +40,7 @@
                                 </a>
                             </li>
                             <li>
-                            <a id="singin" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="{{ route('sign_in') }}" aria-label="Microsoft" >
+                            <a id="singin" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="sign.php" aria-label="Microsoft" >
                                     <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" style="width: 53%;" >
                                 </a>
                             </li>
