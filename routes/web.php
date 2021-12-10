@@ -34,4 +34,8 @@ Route::get('docentes', [DocentesController::class,'index']);
 // en la primersa parte va la url que se ve en la barra de direcciones  controlador inicio de sesion estudiantes
 
 //Route::post($uri, $callback);
-Route::post('sign_in', [EstudiantesController::class, 'sign_in'])->name('sign_in');
+Route::get('sign_in', [EstudiantesController::class, 'sign_in'])->name('sign_in');
+
+//Route::post($uri, $callback);
+Route::get('estudiantes/callback', [EstudiantesController::class, 'callback'])->name('callback');
+

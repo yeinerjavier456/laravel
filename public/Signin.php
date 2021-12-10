@@ -1,6 +1,6 @@
 <?php
 
-session_start(); // Important
+
 require "../vendor/autoload.php";
 
 use myPHPnotes\Microsoft\Auth;
@@ -17,6 +17,11 @@ $callback = "http://localhost/ibero/public/callback.php";
 //https://aulavirtual.ibero.edu.co/repositorio/sitios/estudiantes/callback.php
 
 $microsoft = new Auth($tenant, $client_id,  $client_secret, $callback, $scopes);
+
+Session::put('session',$microsoft);
+//return Redirect::away($microsoft->getAuthUrl());
+
+
 header("location: ". $microsoft->getAuthUrl()); //Redirecting to get access token
 
 ?>

@@ -40,7 +40,7 @@
                                 </a>
                             </li>
                             <li>
-                            <a id="singin" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="signin.php" aria-label="Microsoft" >
+                            <a id="singin" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="{{ route('sign_in') }}" aria-label="Microsoft" >
                                     <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" style="width: 53%;" >
                                 </a>
                             </li>
@@ -78,9 +78,8 @@
 
         <div id="cover-ctn-search"></div>
 
-        <div> 
-          
-        
+      
+       
           
 
         <div class="container" id="move-content">
@@ -146,7 +145,7 @@
 
             <footer>
                 <img src="./img/logo.png" alt="" srcset="" style="margin-top: 3%;" class="col-md-2">
-                <p style="text-align: center;margin-top: -7%;z-index: 0;font-size: 15px;" class=""><span ><strong>CORPORACIÓN UNIVERSITARIA IBEROAMERICANA<br> De: PLANETA FORMACIÓN Y UNIVERSIDADES</strong></span></p>
+                <p style="text-align: center;margin-top: -7%;z-index: 0;font-size: 15px;" class=""><span style=""><strong>CORPORACIÓN UNIVERSITARIA IBEROAMERICANA<br> De: PLANETA FORMACIÓN Y UNIVERSIDADES</strong></span></p>
                 <p style="text-align: center;">Calle 67 No 5 - 27&nbsp; Bogotá - Colombia.</p>
                 
                 
