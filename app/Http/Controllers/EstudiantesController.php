@@ -13,74 +13,44 @@ use Illuminate\Support\Facades\Redirect;
 class EstudiantesController extends Controller
 {
 
-    public function index( $session=null){
-
-
+    public function index(){
+   
+         /* Comprobamos que ha llegado correctamente el campo 'data' */
+         if (isset($_GET["data"] )&& !empty($_GET["data"])) {
+            /* Deshacemos el trabajo hecho por base64_encode */
+            $data = base64_decode($_GET["data"] );
+            /* Deshacemos el trabajo hecho por 'serialize' */
+            $data = unserialize($data);
         
-
-        if($session==null){
+        }else{
+            $data="";
+        }
+ 
+    
+     
+        if($data===null){
+      
             return view('estudiantes.index');
         }else{
-
-            return view('estudiantes.index', [
-                'session' => $session
-            ]);
+         
+          session(["users"=>$data]);
+              
+            return view('estudiantes.index');
+           
+              
+           
         }
        
+    }
+    public function login_estudent(){
+        
     }
 
     //// inicio sesion outlok 
-    public function callback(Request $request){
-
+    public function callback(){
+      
         session_start();
-        $tenant = "common"; 
-        $client_id = "0d7b0a73-c487-443c-8ac1-32e9b959c5ab";
-        $client_secret = "GcZ7Q~4GJ2FbUoT2QbQZ4FFsT36q3hZZr6yu1";
-        $scopes = [
-                    "User.Read",
-                    'Files.Read.All',
-                
-                ];
-        $callback = "http://localhost/ibero/public/estudiantes/callback";
-        //https://aulavirtual.ibero.edu.co/repositorio/sitios/estudiantes/callback.php
-
-       
-        $microsoft = new Auth($tenant,$client_id,$client_secret,$callback, $scopes);
-        //print_r($_REQUEST['code']);
-        $tokens = $microsoft->getToken($_REQUEST['code'],$_SESSION['adnanhussainturki/microsoft']["state"] );
-
-        // Setting access token to the wrapper
-        $microsoft->setAccessToken($tokens->access_token);
-
-        $user = (new User);
-
-
-        if($user->data->getGivenName()){
-            $data=array(
-                "user"=>$user->data->getdisplayName(),
-                "id"=>$user->data->getid(),
-                "userPrincipalName"=>$user->data->getuserPrincipalName(),
-            
-            );
-           
-            $data=serialize( $data);
-            
-            $data= base64_encode($data);
-
-        
-            //index($data);
-            return Redirect::to("http://127.0.0.1:8000/estudiantes?data= ". $data); 
-        }
-
-
-
-    }
-
-
-    public function sign_in(Request $request){
-     
-        // data para crear url
-        session_start();
+                // data para crear url
         $tenant = "common"; 
         $client_id = "0d7b0a73-c487-443c-8ac1-32e9b959c5ab";
         $client_secret = "GcZ7Q~4GJ2FbUoT2QbQZ4FFsT36q3hZZr6yu1";
@@ -93,9 +63,65 @@ class EstudiantesController extends Controller
         //https://aulavirtual.ibero.edu.co/repositorio/sitios/estudiantes/callback.php
 
         $microsoft = new Auth($tenant, $client_id,  $client_secret, $callback, $scopes);
+
+
+        // $microsoft = new Auth(Session::get("tenant_id"),Session::get("client_id"),  Session::get("client_secret"), Session::get("redirect_uri"), Session::get("scopes"));
+        $tokens = $microsoft->getToken($_REQUEST['code'], Session::get("state"));
+
+        $microsoft->setAccessToken($tokens->access_token);
+
+        $user = (new User);
+
+
+        if($user->data->getGivenName()){
+            
+            $data=array(
+                "user"=>$user->data->getdisplayName(),
+                "id"=>$user->data->getid(),
+                "userPrincipalName"=>$user->data->getuserPrincipalName(),
+            
+            );
+            $data=serialize( $data);
+            $data= base64_encode($data);
+
+         
+            session(["users"=> $data]);
+         
+            // return session("users");
+            //$this->index($data);
+            return Redirect::to("http://127.0.0.1:8000/estudiantes?data=".$data);
+       
+        }
+
+
+
+    }
+
+
+    public function sign_in(){
+        session_start();
+        session_destroy();
+
+        session_start();
+        
+        // data para crear url
+        $tenant = "common"; 
+        $client_id = "0d7b0a73-c487-443c-8ac1-32e9b959c5ab";
+        $client_secret = "GcZ7Q~4GJ2FbUoT2QbQZ4FFsT36q3hZZr6yu1";
+        $scopes = [
+                    "User.Read",
+                    'Files.Read.All',
+                
+                ];
+        $callback = "http://localhost/ibero/public/estudiantes/callback";
+        //https://aulavirtual.ibero.edu.co/repositorio/sitios/estudiantes/callback.php
+
+        $microsoft = new Auth($tenant, $client_id,  $client_secret, $callback, $scopes);
+     
+      session(["inicio_microsoft"=>$_SESSION['adnanhussainturki/microsoft']]);
     
-         return Redirect::to($microsoft->getAuthUrl());
-      //header("location: ". $microsoft->getAuthUrl()); //Redirecting to get access token
+        return Redirect::to($microsoft->getAuthUrl());
+     
     }
 
 }

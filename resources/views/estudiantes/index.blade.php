@@ -177,12 +177,12 @@
          
       <script>
            <?php
+           $sessionUsuario=session("users");
+           
             /* Comprobamos que ha llegado correctamente el campo 'data' */
-            if (isset($_GET["data"] )&& !empty($_GET["data"])) {
-                /* Deshacemos el trabajo hecho por base64_encode */
-                $data = base64_decode($_GET["data"] );
-                /* Deshacemos el trabajo hecho por 'serialize' */
-                $data = unserialize($data);
+            if (isset( $sessionUsuario )&& !empty( $sessionUsuario)) {
+               
+                $data = $sessionUsuario;
             
             }else{
                 $data="";

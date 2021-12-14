@@ -48,7 +48,7 @@ $(document).ready(function(){
         //     url:"https://www.ibero.edu.co/documentos/#1600969179236-4c988300-6bd3",
         //     imagen:"img/document.jpg",
         //     category:"Institucionales",
-        //     descripcion:"",
+        //      descripcion:"", id:"4"
             
         // },
         // {
@@ -56,7 +56,7 @@ $(document).ready(function(){
         //     url:"https://www.ibero.edu.co/documentos/#1600969179267-7424b7c7-bb64", 
         //     imagen:"img/document.jpg",
         //     category:"Institucionales",
-        //     descripcion:"",
+        //      descripcion:"", id:"4"
 
         // },
         // {
@@ -64,7 +64,7 @@ $(document).ready(function(){
         //     url:"https://www.ibero.edu.co/documentos/#1600969242228-48ec0493-db58",
         //     imagen:"img/document.jpg",
         //     category:"Institucionales",
-        //     descripcion:"",
+        //      descripcion:"", id:"4"
 
         // },
         // {
@@ -72,7 +72,7 @@ $(document).ready(function(){
         //     url:"https://www.ibero.edu.co/documentos/#1600969276799-de37b446-5382",
         //     imagen:"img/document.jpg",
         //     category:"Institucionales",
-        //     descripcion:"",
+        //      descripcion:"", id:"4"
 
         // },
         // {
@@ -80,7 +80,7 @@ $(document).ready(function(){
         //     url:"https://www.ibero.edu.co/documentos/#1600969301837-48047705-3ee0",
         //     imagen:"img/document.jpg",
         //     category:"Institucionales",
-        //     descripcion:"",
+        //      descripcion:"", id:"4"
 
         // },
         {
@@ -88,7 +88,8 @@ $(document).ready(function(){
             url:"https://app.box.com/s/xkvms20acdbbgwbw4j23qfzp58x7l5p9",
             imagen:"img/document.jpg",
             category:"Institucionales",
-            descripcion:"",
+             descripcion:"", 
+            id:"1"
 
         },
         {
@@ -96,7 +97,8 @@ $(document).ready(function(){
             url:"https://www.ibero.edu.co/wp-content/uploads/2020/08/Modelo-Pedag%C3%B3gico_compressed.pdf",
             imagen:"img/document.jpg",
             category:"Institucionales",
-            descripcion:"",
+             descripcion:"", 
+            id:"2"
 
         },
         {
@@ -104,15 +106,16 @@ $(document).ready(function(){
             url:"https://aulavirtual.ibero.edu.co/recursosel/Manuales/Manual_estudiante.pdf",
             imagen:"img/document.jpg",
             category:"Manuales",
-            descripcion:"",
-
+             descripcion:"",
+            id:"3"
         },
         {
             nombre:"Estructura Cursos formato 2021",
             url:"https://view.genial.ly/6165f559ed4c430d8826ba22",
             imagen:"img/document.jpg",
             category:"Manuales",
-            descripcion:"",
+             descripcion:"", 
+            id:"4"
 
         },
         {
@@ -120,48 +123,48 @@ $(document).ready(function(){
             url:"tutorial_password_mrooms.pdf",
             imagen:"img/document.jpg",
             category:"Manuales",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"5"
         },
         {
             nombre:"Cómo acceder al aula  virtual",
             url:"https://player.vimeo.com/video/578554276",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"6"
         },
         {
             nombre:"restablecer contraseña en aula virtual",
             url:"https://player.vimeo.com/video/578554109",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"7"
         },
         {
             nombre:"Dónde encontrar los cursos en el Aula virtual",
             url:"https://player.vimeo.com/video/578554418",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"8"
         },
         {
             nombre:"Acta compromiso",
             url:"https://player.vimeo.com/video/546711739",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"9"
         },
         {
             nombre:"¿Cómo cargo una actividad?",
             url:"https://player.vimeo.com/video/578601821",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"",
+            id:"10"
         },
        
         {
@@ -169,8 +172,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/578601053",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"11"
         },
        
         {
@@ -178,55 +181,56 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/578601184",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"",
+            id:"12"
         },
         {
             nombre:"¿Cómo usar el servicio de mensajeria?",
             url:"https://player.vimeo.com/video/578601248",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"13"
         },
         {
             nombre:"¿Cómo accedo a clases a través de teams? ",
             url:"https://player.vimeo.com/video/578601348",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"14"
         },
         {
             nombre:"¿Cómo reviso mis calificaciones y retroalimentaciones?",
             url:"https://player.vimeo.com/video/578601407",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"15"
         },
         {
             nombre:"¿Qué es el postest y en dónde lo encuentro?",
             url:"https://player.vimeo.com/video/578601535",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"16"
         },
         {
             nombre:"¿Qué son los test finales de la unidad",
             url:"https://player.vimeo.com/video/578601496",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
-
+             descripcion:"", 
+            id:"17"
         },
         {
             nombre:"¿Qué es la encuesta AVA?",
             url:"https://player.vimeo.com/video/578601589",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"18"
 
         },
         {
@@ -234,7 +238,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/578613094",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"19"
 
         },
         {
@@ -242,7 +247,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/578613267",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"20"
 
         },
         {
@@ -250,7 +256,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/578613424",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"21"
 
         },
         {
@@ -258,7 +265,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546676722",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"22"
 
         },
         {
@@ -266,7 +274,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546687654",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"23"
 
         },
         {
@@ -274,7 +283,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546694773",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"24"
 
         },
         {
@@ -282,7 +292,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546704624",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"25"
 
         },
         {
@@ -290,7 +301,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546708550",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"26"
 
         },
         {
@@ -298,7 +310,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546709255",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"27"
 
         },
         {
@@ -306,7 +319,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546717208",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"28"
 
         },
         {
@@ -314,7 +328,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546717469",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"29"
 
         },
         {
@@ -322,7 +337,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546735408",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"30"
 
         },
         {
@@ -330,7 +346,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546791038",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"31"
 
         },
         {
@@ -338,7 +355,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546791786",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"32"
 
         },
         {
@@ -346,7 +364,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546792154",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"33"
 
         },
         {
@@ -354,7 +373,8 @@ $(document).ready(function(){
             url:"https://player.vimeo.com/video/546791935",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
-            descripcion:"",
+             descripcion:"", 
+             id:"34"
 
         },
        
@@ -382,7 +402,7 @@ $(document).ready(function(){
                         <h5 class="card-title">${document.nombre}</h5>
                         <p class="card-text">${document.descripcion}</p>
 
-                        <div class=" rateYo"id="rateYo"></div>
+                        <div class="rateYo" id="${document.id}"></div>
                     </div>
                     <div class="card-footer bg-transparent"> <button type="button" class="btn btn-lg btn-block ejemplo2"  data-toggle="modal" data-target="#exampleModal"  data-url="${document.url}">Abrir</button></div>
                 </div>

@@ -18,8 +18,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudiantesController;
 use App\Http\Controllers\DocentesController;
 // rais del programa users
-Route::get('/', [UserController::class,'index']);
-
+// Route::get('/', [UserController::class,'index']);
+Route::get('/', [EstudiantesController::class,'index']);
 /// controlador de usuarios creacion
 Route::post('users', [UserController::class, 'store'])->name('users.store');
 
@@ -27,7 +27,7 @@ Route::post('users', [UserController::class, 'store'])->name('users.store');
 Route::delete('users/{user}', [UserController::class,'destroy'])->name('users.destroy');
 
 //pagina inicial de estudiantes
-Route::get('estudiantes', [EstudiantesController::class,'index']);
+Route::get('estudiantes', [EstudiantesController::class,'index'])->name("estudiantes");
 
 ///pagina de inicio docentes
 Route::get('docentes', [DocentesController::class,'index']);
