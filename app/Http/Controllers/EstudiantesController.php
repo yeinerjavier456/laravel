@@ -26,14 +26,14 @@ class EstudiantesController extends Controller
             $data="";
         }
  
-    
+    //return session("users");
      
         if($data===null){
       
             return view('estudiantes.index');
         }else{
          
-          session(["users"=>$data]);
+         
               
             return view('estudiantes.index');
            
@@ -89,7 +89,7 @@ class EstudiantesController extends Controller
          
             // return session("users");
             //$this->index($data);
-            return Redirect::to("http://127.0.0.1:8000/estudiantes?data=".$data);
+            return Redirect::to("http://127.0.0.1:8000/estudiantes");
        
         }
 
