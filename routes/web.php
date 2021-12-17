@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudiantesController;
 use App\Http\Controllers\DocentesController;
+use App\Http\Controllers\UploadController;
 // rais del programa users
 // Route::get('/', [UserController::class,'index']);
 Route::get('/', [EstudiantesController::class,'index']);
@@ -40,4 +41,12 @@ Route::get('sign_in', [EstudiantesController::class, 'sign_in'])->name('sign_in'
 Route::get('estudiantes/callback', [EstudiantesController::class, 'callback'])->name('callback');
 
 //ruta  creador de documentos plataforma
-Route::get('upload', [UploadController::class, 'index'])->name('Upload');
+Route::get('/upload', [UploadController::class, 'index'])->name('Upload');
+
+/// controlador de usuarios creacion
+Route::get('upload/crear', [UploadController::class, 'create']);
+
+// controlador de usuarios eliminacion
+Route::delete('upload/{data}', [UploadController::class,'destroy'])->name('uploads.destroy');
+
+//route :: delete ('upload/destry')
