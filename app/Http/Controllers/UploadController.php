@@ -26,12 +26,17 @@ class UploadController extends Controller
         return view('upload.crear');
     }
 
-    public function salvar(){
+    public function store(Request $request){
 
+        $data=request()->except("_token");
+        uploadModel::insert($data);
+        return response()->json($data);
         return view('upload.index');
+
     }
-    public function destroy(){
-
-        return view('upload.index');
+    public function destroy( $id){
+        uploadModel::destroy($id);
+        return redirect("upload");
+       
     }
 }

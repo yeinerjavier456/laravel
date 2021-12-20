@@ -40,13 +40,4 @@ Route::get('sign_in', [EstudiantesController::class, 'sign_in'])->name('sign_in'
 //Route::post($uri, $callback);
 Route::get('estudiantes/callback', [EstudiantesController::class, 'callback'])->name('callback');
 
-//ruta  creador de documentos plataforma
-Route::get('/upload', [UploadController::class, 'index'])->name('Upload');
-
-/// controlador de usuarios creacion
-Route::get('upload/crear', [UploadController::class, 'create']);
-
-// controlador de usuarios eliminacion
-Route::delete('upload/{data}', [UploadController::class,'destroy'])->name('uploads.destroy');
-
-//route :: delete ('upload/destry')
+Route::resource("upload",UploadController::class);
