@@ -2,15 +2,15 @@
       <div class="row mb-4">
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="form3Example1">nombreArchivo</label>
-                            <input name="nombreArchivo" type="text" id="nombreArchivo" class="form-control" />
+                            <label class="form-label" for="nombreArchivo">nombre Archivo</label>
+                            <input name="nombreArchivo" value="{{ isset($archivo->nombreArchivo)?$archivo->nombreArchivo:''}}" type="text" id="nombreArchivo" class="form-control" />
                         
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-outline">
                             <label class="form-label" for="url">url del iframe</label>
-                            <input type="text" name="url" id="url" class="form-control" />
+                            <input type="text" value="{{ isset($archivo->url)? $archivo->url:'' }}" name="url" id="url" class="form-control" />
                             
                         </div>
                     </div>
@@ -23,14 +23,45 @@
                     <div class="col">
                         <div class="form-outline">
                             <label class="form-label" for="imagen">descripcion</label><br>
-                            <textarea type="text" id="descripcion" name="descripcion" class="form-control"></textarea>
+                            <input type="text" id="descripcion" name="descripcion" value="{{ isset($archivo->descripcion)?$archivo->descripcion:''}}" class="form-control"/>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="form3Example4">category</label>
-                            <input type="text" id="category" name="category" class="form-control" />
+                        
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Seleccione una Categoria</label>
+                                <select class="form-control" id="exampleFormControlSelect1" name="category">
+                                    @if((isset($Categorias) && isset($archivo->category)))
+<?php print_r($archivo->category); exit; ?>
+                                        @foreach($Categorias as  $clave => $valor)
+
+                                            <option value="{{ $clave }}" {{ ($valor == $archivo->category) ?         'selected' : '' }}>
+                                                {{ $valor }}
+                                            </option>
+                                                
+
+                                        @endforeach
+                                        
+                                    @else
+
+                                        @foreach($Categorias as  $clave => $valor)
+
+                                            <option value="{{ $clave }}" >
+                                                {{ $valor }}
+                                            </option>
+                                                
+
+                                        @endforeach
+
+
+                                    @endif
+
+                                 
+                                </select>
+                            </div>
+                          
                         </div>
                     </div>
 
@@ -42,14 +73,46 @@
                 <!-- Password input -->
                 <div class="form-row mb-4">
 
-                    <div class="col">
-                        <div class="custom-file">
-                            <label class="form-label" for="imagen">imagen</label><br>
-                            <input type="file" id="imagen" name="imagen" class="" />
+                <div class="col">
+                        <div class="form-outline">
+                        
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Seleccione una Plataforma</label>
+                                <select class="form-control" id="exampleFormControlSelect1" name="plataforma">
+                                    @if((isset($plataforma) && isset($plataform)))
+
+                                        @foreach($plataforma as  $clave => $valor)
+
+                                            <option value="{{ $clave }}" {{ ($clave == $plataform[$clave]) ?         'selected' : '' }}>
+                                                {{ $valor }}
+                                            </option>
+                                                
+
+                                        @endforeach
+                                        
+                                    @else
+
+                                        @foreach($plataforma as  $clave => $valor)
+
+                                            <option value="{{ $clave }}" >
+                                                {{ $valor }}
+                                            </option>
+                                                
+
+                                        @endforeach
+
+
+                                    @endif
+
+                                 
+                                </select>
+                            </div>
+                          
                         </div>
                     </div>
+
+                   
                   
                 </div>
             
    <!-- Submit button -->
-   <button type="submit" class="btn btn-primary btn-block mb-4">Crear Archivo</button>

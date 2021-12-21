@@ -22,6 +22,7 @@ class CreateUploadsTable extends Migration
             $table->string('category');
             $table->string('descripcion');
             $table->string('creadoPor');
+            $table->string('plataforma');
             
 
         });

@@ -50,12 +50,17 @@ class uploadModel extends Model
 ///devolvemos todos los archivos
     public function obtenerDocumentos()
     {
-        return uploadModel::all();
+
+       $data = DB::table('uploads')->get();
+        return $data;
     }
 
     //
     public function obteneruploadPorId($id)
     {
-        return uploadModel::find($id);
+
+        $data = DB::table('uploads')->where("id",$id)->first();
+        return $data;
+        // return uploadModel::find($id);
     }
 }

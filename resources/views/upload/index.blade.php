@@ -1,6 +1,14 @@
 @include('header');
 
+<a type="button" class="btn btn-primary" href="{{url('upload/create')}}"rel="noopener noreferrer">Nuevo Registro</a>
+
 <title>Archivos</title>
+
+
+
+
+
+
     <div class="container pt-3">
         <div class="row">
             <div class="mx-auto">
@@ -10,26 +18,32 @@
                             <tr>
                                 <th scope="col" > Archivo</th>
                                 <th scope="col" > url</th>
-                                <th scope="col" > imagen</th>
+                             
                                 <th scope="col" > category</th>
                                 <th scope="col" > descripcion</th>
+                                <th scope="col" > plataforma</th>
                                 <th scope="col" >Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($uploads as $upload)
+                            @foreach($archivo as $up)
                             <tr>
-                            <td>{{ $upload->nombreArchivo }}</td>
-                            <td>{{ $upload->url }}</td>
-                            <td>{{ $upload->imagen }}</td>
-                            <td>{{ $upload->category }}</td>
-                            <td>{{ $upload->descripcion }}</td>
-                            <td>Editar {{ $upload->id  }} |
-                                    <form action="{{ url('/upload/'.$upload->id) }}" method="POST">
+                            <td>{{ $up->nombreArchivo }}</td>
+                            <td>{{ $up->url }}</td>
+                            <td>{{ $up->category }}</td>
+                            <td>{{ $up->descripcion }}</td>
+                            <td>{{ $up->plataforma }}</td>
+                            <td>
+                                <a href="{{ url('upload/'.$up->id.'/edit') }}"  class="btn  btn-primary" style="min-width: 5rem; margin-bottom: 10%;">
+                              
+                                        Editar
+                                </a>
+                              
+                                    <form action="{{ url('upload/'.$up->id) }}" method="POST">
                                         <!-- nesesario paraa laravel -->
-                                        @csrf;
+                                        @csrf
                                         {{method_field('DELETE')}}
-                                        <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" onclick="return confirm(`¿Desea eliminar el Archivo?`)">
+                                        <input type="submit" value="Eliminar" class="btn  btn-danger" onclick="return confirm(`¿Desea eliminar el Archivo?`)">
                                     </form>
                                 </td>
                             </tr>
