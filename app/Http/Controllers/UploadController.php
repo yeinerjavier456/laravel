@@ -94,24 +94,7 @@ class UploadController extends Controller
 
         $archivo=uploadModel::obteneruploadPorId($id);
     
-        // if($archivo->category==0){
-        //     $archivo->category="Capsulas";
-            
-        // }else if($archivo->category==1){
-        //         $archivo->category="Manuales";
-            
-        // }else{
-        //         $archivo->category="Institucional";
-        
-        // }
-
-        // if($archivo->plataforma==0){
-        //     $archivo->plataforma="Docentes";
-        
-        // }else {
-        //         $archivo->plataforma="Estudiantes";
-        // }
-    
+         
             
         return view('upload.editar',compact(['archivo','Categorias','plataforma']));
     }
@@ -134,6 +117,7 @@ class UploadController extends Controller
         // exit;
         uploadModel::where('id','=',$id)->update($data);
         $archivo=uploadModel::findOrfail($id);
-        return view('upload.editar',compact(['archivo','Categorias','plataforma']));
+        
+        return redirect("upload");
     }
 }

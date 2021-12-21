@@ -31,13 +31,16 @@
                         <div class="form-outline">
                         
                             <div class="form-group">
+
+                              
+
+
                                 <label for="exampleFormControlSelect1">Seleccione una Categoria</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="category">
                                     @if((isset($Categorias) && isset($archivo->category)))
-<?php print_r($archivo->category); exit; ?>
-                                        @foreach($Categorias as  $clave => $valor)
 
-                                            <option value="{{ $clave }}" {{ ($valor == $archivo->category) ?         'selected' : '' }}>
+                                        @foreach($Categorias as  $clave => $valor)
+                                            <option value="{{ $clave }}" {{ ($clave == $archivo->category) ?         'selected' : '' }}>
                                                 {{ $valor }}
                                             </option>
                                                 
@@ -48,6 +51,7 @@
 
                                         @foreach($Categorias as  $clave => $valor)
 
+                                        
                                             <option value="{{ $clave }}" >
                                                 {{ $valor }}
                                             </option>
@@ -79,11 +83,11 @@
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Seleccione una Plataforma</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="plataforma">
-                                    @if((isset($plataforma) && isset($plataform)))
+                                    @if((isset($plataforma) && isset($archivo->plataforma)))
 
                                         @foreach($plataforma as  $clave => $valor)
 
-                                            <option value="{{ $clave }}" {{ ($clave == $plataform[$clave]) ?         'selected' : '' }}>
+                                            <option value="{{ $clave }}" {{ ($clave == $archivo->plataforma) ?         'selected' : '' }}>
                                                 {{ $valor }}
                                             </option>
                                                 
