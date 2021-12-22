@@ -51,7 +51,7 @@ $(document).ready(function(){
     const documentos=[
     
         {  
-            nombre:"Misión ",
+            nombre:"Misión",
             url:"https://www.ibero.edu.co/documentos/#1600969179236-4c988300-6bd3",
             imagen:"img/document.jpg",
             category:"Institucionales",
@@ -59,7 +59,7 @@ $(document).ready(function(){
     
         },
         {
-            nombre:"Visión "                   ,
+            nombre:"Visión"                   ,
             url:"https://www.ibero.edu.co/documentos/#1600969179267-7424b7c7-bb64", 
             imagen:"img/document.jpg",
             category:"Institucionales",
@@ -88,21 +88,21 @@ $(document).ready(function(){
         },
         {
             nombre:"PEI",
-            url:" https://www.ibero.edu.co/wp-content/uploads/2020/06/PEI.pdf",
+            url:"https://www.ibero.edu.co/wp-content/uploads/2020/06/PEI.pdf",
             imagen:"img/document.jpg",
             category:"Institucionales",
              descripcion:"",
         },
         {
             nombre:"Lineamientos Curriculares",
-            url:" https://app.box.com/s/v0mtnl2grvdw5ksyfi0tjiidcca89515",
+            url:"https://app.box.com/s/v0mtnl2grvdw5ksyfi0tjiidcca89515",
             imagen:"img/document.jpg",
             category:"Institucionales",
              descripcion:"",
         },
         {
             nombre:"Manual del tutor virtual",
-            url:" https://aulavirtual.ibero.edu.co/recursosel/Manuales/ManualdelTutorVirtual.pdf",
+            url:"https://aulavirtual.ibero.edu.co/recursosel/Manuales/ManualdelTutorVirtual.pdf",
             imagen:"img/document.jpg",
             category:"Manuales",
              descripcion:"",
@@ -129,7 +129,7 @@ $(document).ready(function(){
              descripcion:"",
         },
         {
-            nombre:" Gestión Tutorial Cambio de fecha de un cuestionario",
+            nombre:"Gestión Tutorial Cambio de fecha de un cuestionario",
             url:"https://player.vimeo.com/video/413579839?h=061d31a41e",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",

@@ -8,6 +8,7 @@ use myPHPnotes\Microsoft\Auth;
 use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\uploadModel;
 
 
 class EstudiantesController extends Controller
@@ -27,17 +28,17 @@ class EstudiantesController extends Controller
         }
  
     //return session("users");
+   $archivos=uploadModel::get_plataforma_estudiantes();
+
+        // print_r( $archivos);
+        // exit;
      
         if($data===null){
       
-            return view('estudiantes.index');
+            return view('estudiantes.index',$archivos);
         }else{
-         
-         
               
-            return view('estudiantes.index');
-           
-              
+            return view('estudiantes.index',$archivos);
            
         }
        

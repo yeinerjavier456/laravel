@@ -63,4 +63,10 @@ class uploadModel extends Model
         return $data;
         // return uploadModel::find($id);
     }
+
+
+    public function get_plataforma_estudiantes(){
+        $data = DB::table('uploads')->where("plataforma",1)->get();
+        return $data;
+    }
 }

@@ -166,7 +166,6 @@ $(document).ready(function(){
              descripcion:"",
             id:"10"
         },
-       
         {
             nombre:"¿Cómo reviso fechas de entrega?",
             url:"https://player.vimeo.com/video/578601053",
@@ -175,7 +174,6 @@ $(document).ready(function(){
              descripcion:"", 
             id:"11"
         },
-       
         {
             nombre:"¿Qué es un foro de acompañamiento?",
             url:"https://player.vimeo.com/video/578601184",
@@ -217,7 +215,7 @@ $(document).ready(function(){
             id:"16"
         },
         {
-            nombre:"¿Qué son los test finales de la unidad",
+            nombre:"¿Qué son los test finales de la unidad?",
             url:"https://player.vimeo.com/video/578601496",
             imagen:"img/Mesa de trabajo 1.png",
             category:"Capsulas",
@@ -377,11 +375,18 @@ $(document).ready(function(){
              id:"34"
 
         },
-       
-       
-       
     
     ]
+
+
+    $.ajax({
+        url: "test.html",
+        context: document.body
+      }).done(function() {
+
+        $( this ).addClass( "done" );
+        
+      });
     
     const search=document.querySelector("#inputSearch");
     const resultado=document.querySelector("#resultado");
@@ -391,7 +396,7 @@ $(document).ready(function(){
         resultado.innerHTML='';
         
         const texto= search.value.toLowerCase();
-        for(var document of documentos ){
+        for(var document of archivos ){
             var nombre=document.nombre.toLowerCase();
             if(nombre.indexOf(texto) !==-1){
                

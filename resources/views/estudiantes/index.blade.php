@@ -164,7 +164,7 @@
       <script>
            <?php
            $sessionUsuario=session("users");
-           
+            
             /* Comprobamos que ha llegado correctamente el campo 'data' */
             if (isset( $sessionUsuario )&& !empty( $sessionUsuario)) {
                
@@ -173,8 +173,13 @@
             }else{
                 $data="";
             }
+
+         
+            
         ?>
-          
+      
+
+     
         const data = <?php echo json_encode($data); ?>
       
       </script>

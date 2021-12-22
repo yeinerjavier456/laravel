@@ -26,7 +26,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($archivo as $up)
+                            @foreach(                                                                           as $up)
                             <tr>
                             <td>{{ $up->nombreArchivo }}</td>
                             <td>{{ $up->url }}</td>

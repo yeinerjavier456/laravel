@@ -41,3 +41,4 @@ Route::get('sign_in', [EstudiantesController::class, 'sign_in'])->name('sign_in'
 Route::get('estudiantes/callback', [EstudiantesController::class, 'callback'])->name('callback');
 
 Route::resource("upload",UploadController::class);
+
