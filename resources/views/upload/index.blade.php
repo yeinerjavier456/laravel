@@ -5,7 +5,9 @@
 <title>Archivos</title>
 
 
-
+<script>
+    console.log(<?php  $data; ?> }});
+</script>
 
 
 
@@ -26,7 +28,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach(                                                                           as $up)
+                            @foreach($archivo as $up)
                             <tr>
                             <td>{{ $up->nombreArchivo }}</td>
                             <td>{{ $up->url }}</td>
@@ -55,5 +57,8 @@
             </div>
         </div>
     </div>
+
+
+   
 
     @include('footer');

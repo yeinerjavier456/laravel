@@ -15,30 +15,35 @@ class EstudiantesController extends Controller
 {
 
     public function index(){
+        // print_r($datas);
    
          /* Comprobamos que ha llegado correctamente el campo 'data' */
-         if (isset($_GET["data"] )&& !empty($_GET["data"])) {
+         if (session('users')) {
             /* Deshacemos el trabajo hecho por base64_encode */
-            $data = base64_decode($_GET["data"] );
+            $data = base64_decode((session('users')));
             /* Deshacemos el trabajo hecho por 'serialize' */
             $data = unserialize($data);
+          
         
         }else{
             $data="";
         }
- 
-    //return session("users");
-   $archivos=uploadModel::get_plataforma_estudiantes();
 
-        // print_r( $archivos);
-        // exit;
+        $archivo=uploadModel::get_plataforma_estudiantes();
+        $archivo=$archivo->all();
+
+  
      
         if($data===null){
       
-            return view('estudiantes.index',$archivos);
+            return view('estudiantes.index',compact(['archivo','data']));
         }else{
+         
+         
               
-            return view('estudiantes.index',$archivos);
+            return view('estudiantes.index',compact(['archivo','data']));
+           
+              
            
         }
        
@@ -82,16 +87,16 @@ class EstudiantesController extends Controller
                 "userPrincipalName"=>$user->data->getuserPrincipalName(),
             
             );
+
+            $_SESSION["usuario"]=$data;
+           
             $data=serialize( $data);
             $data= base64_encode($data);
 
-         
-            session(["users"=> $data]);
-         
-            // return session("users");
-            //$this->index($data);
-            return Redirect::to("http://127.0.0.1:8000/estudiantes");
        
+            session(["users"=> $data]);
+            return redirect()->route('estudiantes');
+          
         }
 
 

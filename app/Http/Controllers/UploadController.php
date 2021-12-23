@@ -38,10 +38,6 @@ class UploadController extends Controller
              $data["archivo"][$key]->plataforma="Estudiantes";
         }
 
-
-
-
-       
         
       }
       //exit;
@@ -67,7 +63,22 @@ class UploadController extends Controller
 
     public function store(Request $request){
 
+
         $data=request()->except("_token");
+
+        if($data["category"]==0){
+            $data["imagen"]="img/capsulas.png";
+
+        }else if($data["category"]==1)
+        {
+            $data["imagen"]="img/Manuales.jpg";
+        }else{
+            $data["imagen"]="img/institucional.jpg";;
+        }
+        date_default_timezone_set("America/Bogota");
+        $data["created_at"]=new \DateTime(); 
+        // print_r($data);
+        // exit;
       
         uploadModel::insert($data);
       
@@ -102,17 +113,19 @@ class UploadController extends Controller
     public function update(Request  $request,$id){
       
         $data=request()->except(["_token",'_method']);
+        if($data["category"]==0){
+            $data["imagen"]="img/capsulas.png";
 
-        $Categorias=array(
-            '0'=>"Capsulas",
-            '1'=>"Manuales",
-            '2'=>"Institucional"
-        );
-        $plataforma=array(
-            '0'=>"Docentes",
-            '1'=>"Estudiantes",
-        );
-
+        }else if($data["category"]==1)
+        {
+            $data["imagen"]="img/Manuales.jpg";
+        }else{
+            $data["imagen"]="img/institucional.jpg";;
+        }
+        date_default_timezone_set("America/Bogota");
+        $data["updated_at"]=new \DateTime(); 
+        // print_r($data);
+        // exit;
         // print_r($data);
         // exit;
         uploadModel::where('id','=',$id)->update($data);

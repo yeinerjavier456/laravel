@@ -24,6 +24,8 @@ Route::get('/', [EstudiantesController::class,'index']);
 /// controlador de usuarios creacion
 Route::post('users', [UserController::class, 'store'])->name('users.store');
 
+Route::post('archivos/all', [EstudiantesController::class, 'get_all'])->name('archivos/all');
+
 // controlador de usuarios eliminacion
 Route::delete('users/{user}', [UserController::class,'destroy'])->name('users.destroy');
 
