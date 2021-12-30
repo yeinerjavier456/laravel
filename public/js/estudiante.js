@@ -45,15 +45,14 @@ $(document).ready(function(){
     const search=document.querySelector("#inputSearch");
     const resultado=document.querySelector("#resultado");
     
-    console.log(documentos);
+    
     var contador=0;
     const filtrar= ()=>{
         resultado.innerHTML='';
         
         const texto= search.value.toLowerCase();
         for(var document of documentos ){
-            console.log(document);
-            var nombre=document.nombreArchivo.toLowerCase();
+                      var nombre=document.nombreArchivo.toLowerCase();
             if(nombre.indexOf(texto) !==-1){
                
                 resultado.innerHTML+=`
@@ -63,6 +62,7 @@ $(document).ready(function(){
                         <h5 class="card-title">${document.nombreArchivo}</h5>
                         <p class="card-text">${document.descripcion?document.descripcion:""}</p>
 
+                        
                         <div class="rateYo" id="${document.id}"></div>
                     </div>
                     <div class="card-footer bg-transparent"> <button type="button" class="btn btn-lg btn-block ejemplo2"  data-toggle="modal" data-target="#exampleModal"  data-url="${document.url}">Abrir</button></div>
@@ -181,6 +181,47 @@ $(document).ready(function(){
         document.getElementById("move-content").classList.toggle('move-container-all');
         document.getElementById("show-menu").classList.toggle('show-lateral');
     }
+
+
+    // Getter
+var onChange = $(".rateYo").rateYo("option", "onChange"); //returns the function
+ 
+// Setter
+// $(".rateYo").rateYo("option", "onChange", function () {
+  
+//  $id=$(this).attr("id");
+//     console.log( $id);
+// }); //returns a jQuery Element
+    // $(".rateYo").rateYo({
+        
+    //     onChange: function (rating, rateYoInstance) {
+     
+    //      console.log(rating);
+    //     }
+    //   });
+
+    // Getter
+    var onChange = $(".rateYo").rateYo("option", "onChange"); //returns the function
+    
+    // Setter
+    $(".rateYo").rateYo("option", "onChange", function (rating, rateYoInstance) {
+    
+       
+      console.log(rating);
+      console.log(rateYoInstance);
+        }); //returns a jQuery Element
+
+ 
+
+    // $(".rateYo").rateYo()
+    // .on("rateyo.change", function (e, data) {
+
+    //   var rating = data.rating;
+    //   $(this).next().text(rating);
+
+    //   console.log(rating);
+    //   console.log(data);
+    // });
 
     
 });

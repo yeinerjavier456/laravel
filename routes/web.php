@@ -18,6 +18,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudiantesController;
 use App\Http\Controllers\DocentesController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\loginController;
 // rais del programa users
 // Route::get('/', [UserController::class,'index']);
 Route::get('/', [EstudiantesController::class,'index']);
