@@ -62,8 +62,8 @@ $(document).ready(function(){
                         <h5 class="card-title">${document.nombreArchivo}</h5>
                         <p class="card-text">${document.descripcion?document.descripcion:""}</p>
 
-                        
-                        <div class="rateYo" id="${document.id}"></div>
+                        <input id="${document.id}" type="text" class="rating" data-size="lg" >
+                      
                     </div>
                     <div class="card-footer bg-transparent"> <button type="button" class="btn btn-lg btn-block ejemplo2"  data-toggle="modal" data-target="#exampleModal"  data-url="${document.url}">Abrir</button></div>
                 </div>
@@ -211,7 +211,16 @@ var onChange = $(".rateYo").rateYo("option", "onChange"); //returns the function
       console.log(rateYoInstance);
         }); //returns a jQuery Element
 
- 
+ // initialize with defaults
+$("#input-id").rating();
+
+// with plugin options (do not attach the CSS class "rating" to your input if using this approach)
+$(".rating").rating({'size':'lg'});
+
+$('.rating').on('rating:change', function(event, value, caption) {
+    console.log(value);
+    console.log(caption);
+});
 
     // $(".rateYo").rateYo()
     // .on("rateyo.change", function (e, data) {
